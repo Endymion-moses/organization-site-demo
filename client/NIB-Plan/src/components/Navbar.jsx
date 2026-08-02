@@ -11,19 +11,19 @@ const Navbar = () => {
 
   // Common styling for active link state
   const linkStyles = ({ isActive }) =>
-    `transition-colors duration-200 hover:text-blue-900 text-black ${isActive ? 'text-blue-900 font-bold' : ''}`;
+    `transition-colors duration-200 hover:text-blue-900 text-gray-700 text-sm ${isActive ? 'text-gray-900 font-bold' : ''}`;
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-white to-blue-500 rounded-xl text-white shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-white/50 to-blue-200 rounded-xl text-white shadow-md z-50">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4 md:px-8">
 
         {/* Logo Container */}
         <NavLink to="/" className="flex items-center">
-          <img src={logo} alt="NIB-Plan Logo" className="h-20  w-auto object-contain" />
+          <img src={logo} alt="NIB-Plan Logo" className="h-10  w-auto object-contain" />
         </NavLink>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 text-sm  font-medium pr-70 ">
+        <div className="hidden md:flex items-center gap-8 text-sm  font-medium pr-70  ">
           <NavLink to="/" className={linkStyles}>Home</NavLink>
           <NavLink to="/about" className={linkStyles}>About Us</NavLink>
           <NavLink to="/services" className={linkStyles}>Services</NavLink>
